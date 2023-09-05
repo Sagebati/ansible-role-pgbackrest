@@ -24,6 +24,8 @@ __pgbackrest_postgresql_conf_path:
     9: "/etc/postgresql/9.6/main/postgresql.conf"
     10: "/etc/postgresql/11/main/postgresql.conf"
     11: "/etc/postgresql/13/main/postgresql.conf"
+    14: "/etc/postgresql/14/main/postgresql.conf"
+    15: "/etc/postgresql/15/main/postgresql.conf"
 
 # Default values to be merged with the values provided externally.
 # We merge this in to maintain at least a repo1-path an repo-retention-path
