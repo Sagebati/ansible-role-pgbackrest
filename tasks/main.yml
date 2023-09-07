@@ -66,10 +66,6 @@
   tags:
     - pgbackrest
 
-- name: debug
-  debug:
-    var: "{{ ansible_distribution_major_version }}"
-
 - name: Update the postgresql conf file
   ansible.builtin.blockinfile:
     path: "{{ _pgbackrest_postgresql_conf_path }}"
