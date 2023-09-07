@@ -1,4 +1,7 @@
 ---
+- name: Populate service facts
+  ansible.builtin.service_facts:
+
 - name: Disable timers if the systemd timer is disabled
   ansible.builtin.systemd:
     name: "{{ _systemd_timer }}"
