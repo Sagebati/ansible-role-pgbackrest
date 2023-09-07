@@ -271,9 +271,7 @@
     day: "{{ (pgbackrest_cron_schedule.split())[2] }}"
     month: "{{ (pgbackrest_cron_schedule.split())[3] }}"
     weekday: "{{ (pgbackrest_cron_schedule.split())[4] }}"
-    owner: root
-    group: root
-    mode: "0644"
+    user: root
     state: >-
       {%- if (
           pgbackrest_cron_enabled and
