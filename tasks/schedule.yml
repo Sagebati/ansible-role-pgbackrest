@@ -218,9 +218,7 @@
     day: "{{ (pgbackrest_full_cron_schedule.split())[2] }}"
     month: "{{ (pgbackrest_full_cron_schedule.split())[3] }}"
     weekday: "{{ (pgbackrest_full_cron_schedule.split())[4] }}"
-    owner: root
-    group: root
-    mode: "0644"
+    user: root
     state: >-
       {%- if pgbackrest_cron_enabled -%}
         present
@@ -245,9 +243,7 @@
     day: "{{ (pgbackrest_diff_cron_schedule.split())[2] }}"
     month: "{{ (pgbackrest_diff_cron_schedule.split())[3] }}"
     weekday: "{{ (pgbackrest_diff_cron_schedule.split())[4] }}"
-    owner: root
-    group: root
-    mode: "0644"
+    user: root
     state: >-
       {%- if (
           pgbackrest_cron_enabled and
