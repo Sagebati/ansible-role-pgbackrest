@@ -110,6 +110,11 @@ pgbackrest_postgresql_rhel_repo_package: null
 # If null, this will be automatically determined by this role
 pgbackrest_postgresql_rhel_repo_rpm_key: null
 
+
+# When set to true we configure the postgresql service if set to false 
+# We presume postgresql was already configured
+pgbackrest_postgresql_configure: true 
+
 # This value specifies the path to the installed postgresql.conf filename
 # if you want to edit its values to enable archiving for pgBackRest.
 pgbackrest_postgresql_conf_path: null
