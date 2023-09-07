@@ -11,6 +11,7 @@
   loop_control:
     loop_var: _systemd_timer
   when:
+    - "_systemd_timer in ansible_facts.services"
     - "ansible_service_mgr == 'systemd'"
     - "not pgbackrest_systemd_timer_enabled"
   tags:
