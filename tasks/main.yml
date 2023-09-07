@@ -101,6 +101,7 @@
       {% endfor %}
   register: __pgbackrest_pg_upd_conf
   when:
+    - "pgbackrest_update_postgresql_conf"
     - "pgbackrest_postgresql_conf"
     - "_pgbackrest_postgresql_conf_path is not none"
   tags:
@@ -115,6 +116,7 @@
     state: absent
   register: __pgbackrest_pg_rem_conf
   when:
+    - "pgbackrest_update_postgresql_conf"
     - "not pgbackrest_postgresql_conf"
     - "_pgbackrest_postgresql_conf_path is not none"
   tags:
